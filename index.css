@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav-conatiner{
+display: flex;
+position: relative;
+width: 1440px;
+height: 90px;
+background: #F0F0F0;
+box-shadow: 0px 4px 4px 0px #00000040;
+}
+/* nav-left section */
+.nav-left-container{
+position: absolute;
+display: flex;
+width: 311px;
+height: 49px;
+top: 20px;
+left: 83px;
+}
+.nav-logo{
+width: 49.11px;
+height: 49px;
+background-image: url('./images/Vector.png');
+}
+
+
+.nav-company-title{
+    width: 262px;
+    height: 49px;
+    display: flex;
+    position: relative;
+}
+.Deep-title{
+    position: absolute;
+    width: 71.97px;
+    height: 22.8px;
+    top: 13.13px;
+    left: 67.99px;
+  
+}
+.Thought-title{
+ position: absolute;
+ width: 158.76px;
+height: 23.49px;
+top: 12.67px;
+left: 150.66px;
+}
+/* nav-right-section */
+.nav-icon-home{
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+background-image: url('./images/Ellipse\ 56.png');
+width: 30px;
+height: 32.37px;
+top: 33px;
+left: 1133px;
+}
+.nav-icon-setting{
+    display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+width: 30px;
+height: 32.37px;
+top: 33px;
+left: 1186px;
+
+}
+.nav-icon-notification{
+    display: flex;
+justify-content: center;
+align-items: center;
+ position: absolute;
+width: 31.15px;
+height: 33.47px;
+top: 31.43px;
+left: 1237px;
+
+}
+.nav-icon-images{
+    display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+width: 37px;
+height: 37px;
+top: 28px;
+left: 1291px;
+}
