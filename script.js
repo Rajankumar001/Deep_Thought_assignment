@@ -23,17 +23,33 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             const cardContainer = document.getElementById('card-container');
-            const maincardcontainer=document.getElementsByClassName('main-card-container')
             data.forEach(item => {
                 item.tasks.forEach(task => {
                     task.assets.forEach(asset => {
                         
-                        const cardTitleParagraph = document.getElementsByClassName('card-heading-tile');
-                        cardTitleParagraph.innerText = asset.asset_title;
-
-                        const cardDescriptionParagraph = document.createElement('card-heading-description');
-                        cardDescriptionParagraph.innerText = asset.asset_description;
-                        cardContainer.appendChild(maincardcontainer);
+                        const card = document.createElement('div');
+                        card.classList.add('main-card-container');
+        
+                        // Card title
+                        const cardTitle = document.createElement('div');
+                        cardTitle.classList.add('card-title');
+                        const cardTitleText = document.createElement('p');
+                        cardTitleText.textContent = asset.asset_title;
+                        cardTitle.appendChild(cardTitleText);
+        
+                        // Card description
+                        const cardDescription = document.createElement('div');
+                        cardDescription.classList.add('card-description');
+                        const cardDescriptionText = document.createElement('p');
+                        cardDescriptionText.textContent = asset.asset_description;
+                        cardDescription.appendChild(cardDescriptionText);
+        
+                        // Append title and description to card
+                        card.appendChild(cardTitle);
+                        card.appendChild(cardDescription);
+        
+                        // Append card to main container
+                        cardContainer.appendChild(card);
                     });
                 });
             });

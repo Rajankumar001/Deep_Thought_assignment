@@ -336,6 +336,8 @@ color: #000000;
 /* C--A--R--D  <-----||||||||||||--->C--O--N--T--A--I--N--E--R */
 #card-container{
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
    
 }
 .main-card-container{
@@ -363,6 +365,7 @@ top: 307px;
 left: 214px;
 gap: 0px;
 background: #000000;
+color: white;
 border-radius: 15px 15px 0px 0px;
 opacity: 0px;
 
@@ -376,5 +379,6 @@ gap: 0px;
 opacity: 0px;
 background: #FDFDFD;
 box-shadow: 0px 1px 1px 0px #00000040;
+
 
 }
