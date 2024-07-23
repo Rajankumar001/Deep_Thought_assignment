@@ -334,6 +334,10 @@ text-align: left;
 color: #000000;
 }
 /* C--A--R--D  <-----||||||||||||--->C--O--N--T--A--I--N--E--R */
+#card-container{
+    display: flex;
+   
+}
 .main-card-container{
 display: flex;
 flex-direction: column;

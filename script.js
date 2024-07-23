@@ -23,36 +23,21 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             const cardContainer = document.getElementById('card-container');
-
+            const maincardcontainer=document.getElementsByClassName('main-card-container')
             data.forEach(item => {
                 item.tasks.forEach(task => {
                     task.assets.forEach(asset => {
                         
-                        const mainCardContainer = document.createElement('div');
-                        mainCardContainer.classList.add('main-card-container');
+                        const cardTitleParagraph = document.getElementsByClassName('card-heading-tile');
+                        cardTitleParagraph.innerText = asset.asset_title;
 
-                       
-                        const cardTitle = document.createElement('div');
-                        cardTitle.classList.add('card-title');
-                        const cardTitleParagraph = document.createElement('p');
-                        cardTitleParagraph.textContent = asset.asset_title;
-                        cardTitle.appendChild(cardTitleParagraph);
-
-                        const cardDescription = document.createElement('div');
-                        cardDescription.classList.add('card-description');
-                        const cardDescriptionParagraph = document.createElement('p');
-                        cardDescriptionParagraph.textContent = asset.asset_description;
-                        cardDescription.appendChild(cardDescriptionParagraph);
-
-                        
-                        mainCardContainer.appendChild(cardTitle);
-                        mainCardContainer.appendChild(cardDescription);
-
-                       
-                        cardContainer.appendChild(mainCardContainer);
+                        const cardDescriptionParagraph = document.createElement('card-heading-description');
+                        cardDescriptionParagraph.innerText = asset.asset_description;
+                        cardContainer.appendChild(maincardcontainer);
                     });
                 });
             });
         })
         .catch(error => console.error('Error fetching JSON:', error));
 });
+``
