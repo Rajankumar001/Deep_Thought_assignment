@@ -34,9 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         const cardTitle = document.createElement('div');
                         cardTitle.classList.add('card-title');
+                        const card_title_icon=document.createElement('div');
+                        card_title_icon.classList.add('card-title-right-corner-icon');
                         const cardTitleParagraph = document.createElement('p');
                         cardTitleParagraph.textContent = asset.asset_title;
                         cardTitle.appendChild(cardTitleParagraph);
+                        cardTitle.appendChild(card_title_icon);
 
                      
                         const cardDescription = document.createElement('div');
